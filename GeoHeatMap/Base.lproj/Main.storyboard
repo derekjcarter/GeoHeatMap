@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GeoHeatMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GYZ-5u-KD9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yvh-1y-bld">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOs-fM-Rbv">
+                                <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="KNJ-a5-Fcu"/>
+                                    <constraint firstAttribute="height" constant="40" id="yqg-wW-gQP"/>
+                                </constraints>
+                                <state key="normal" image="RefreshIcon"/>
+                                <connections>
+                                    <action selector="refreshButtonDidTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cHu-0i-A7P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yvh-1y-bld" secondAttribute="trailing" id="3nv-aB-nTz"/>
+                            <constraint firstAttribute="trailing" secondItem="GYZ-5u-KD9" secondAttribute="trailing" id="CDJ-cJ-TUu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yvh-1y-bld" secondAttribute="bottom" id="IWJ-Ck-9s7"/>
+                            <constraint firstItem="yvh-1y-bld" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jau-Xj-7AP"/>
+                            <constraint firstItem="GYZ-5u-KD9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SQT-Hc-mw1"/>
+                            <constraint firstItem="yvh-1y-bld" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VKu-v7-0My"/>
+                            <constraint firstItem="GYZ-5u-KD9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="agN-mb-Bbw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GYZ-5u-KD9" secondAttribute="bottom" id="feV-op-b1n"/>
+                            <constraint firstItem="eOs-fM-Rbv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mx3-QX-hX0"/>
+                            <constraint firstItem="eOs-fM-Rbv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ruK-JU-kIt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heatImageView" destination="yvh-1y-bld" id="SYX-X3-zK3"/>
+                        <outlet property="mapView" destination="GYZ-5u-KD9" id="izd-S4-3VF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RefreshIcon" width="150" height="150"/>
+    </resources>
+</document>
